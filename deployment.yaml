@@ -18,7 +18,7 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: 6
+  replicas: 2
   selector:
     matchLabels:
       app: nginx
@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: gcr.io/rosy-spring-399707/nginx
+        image: gcr.io/project-id/nginx
         ports:
         - containerPort: 80
