@@ -11,7 +11,7 @@ steps:
   args:
   - '-c'
   - > 
-    gcloud deploy releases create release-$SHORT_SHA
+    gcloud deploy releases create release-$BUILD_ID
     --delivery-pipeline=cloud-deploy-mp1
     --region=us-west4
     --source=./
