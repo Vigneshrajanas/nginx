@@ -26,6 +26,6 @@ steps:
     - |
           
           gcloud container clusters get-credentials cluster-1 --project rosy-spring-399707 --zone us-west4-b
-          sed -i 's|gcr.io/project-id/myreact-app|gcr.io/$PROJECT_ID/nginx:$SHORT_SHA|' ./deployment.yaml
+          sed -i 's|gcr.io/project-id/nginx|gcr.io/$PROJECT_ID/nginx:$SHORT_SHA|' ./deployment.yaml
           kubectl apply -f ./deployment.yaml
 timeout: 2000s
