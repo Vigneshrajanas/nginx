@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: gcr.io/rosy-spring-399707/nginx
+        image: gcr.io/rosy-spring-399707/nginx:<VERSION>
         ports:
         - containerPort: 80
