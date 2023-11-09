@@ -13,6 +13,6 @@ steps:
   - > 
     gcloud deploy releases create release-$SHORT_SHA
     --delivery-pipeline=cloud-deploy-mp1
-    --region=us-central1
+    --region=us-west4
     --source=./
     --images=nginx1=gcr.io/rosy-spring-399707/nginx1:v1
