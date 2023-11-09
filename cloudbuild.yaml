@@ -11,8 +11,8 @@ steps:
   args:
   - '-c'
   - > 
-gcloud deploy releases create initial-release-1 \
-    --delivery-pipeline=cloud-deploy-mp1 \
-    --region=us-west4 \
-    --source=./ \
-    --images=gcr.io/rosy-spring-399707/nginx1:v1
+     gcloud deploy releases create initial-release-1 \
+     --delivery-pipeline=cloud-deploy-mp1 \
+     --region=us-west4 \
+     --source=./ \
+     --images=gcr.io/rosy-spring-399707/nginx1:v1
