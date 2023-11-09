@@ -13,6 +13,6 @@ steps:
   - > 
 gcloud deploy releases create initial-release-1 \
     --delivery-pipeline=cloud-deploy-mp1 \
-    --region=us-westb \
+    --region=us-west4 \
     --source=./ \
     --images=gcr.io/rosy-spring-399707/nginx1:v1
