@@ -1,10 +1,10 @@
 steps:
 #Building the docker image
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/rosy-spring-399707/nginx1:v1', '.' ]
+  args: [ 'build', '-t', 'gcr.io/rosy-spring-399707/nginx1:v2', '.' ]
 #Pushing the image to GCR
 - name: 'gcr.io/cloud-builders/docker'
-  args: ["push", "gcr.io/rosy-spring-399707/nginx1:v1"]
+  args: ["push", "gcr.io/rosy-spring-399707/nginx1:v2"]
 #Starting the cloud deploy release to deploy the manifest
 - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
   entrypoint: 'bash'
@@ -15,4 +15,4 @@ steps:
     --delivery-pipeline=cloud-deploy-mp1
     --region=us-west4
     --source=./
-    --images=nginx1=gcr.io/rosy-spring-399707/nginx1:v1
+    --images=nginx1=gcr.io/rosy-spring-399707/nginx1:v2
